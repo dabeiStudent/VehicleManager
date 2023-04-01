@@ -1,44 +1,26 @@
 package com.example.vehiclemanager;
 
-public class User {
-    private String success;
-    private String message;
-    private String token;
+import java.io.Serializable;
+
+public class User implements Serializable {
+    private String id;
     private String username;
     private String password;
     private String createTime;
 
-    public User(String success, String message, String token, String username, String password, String createTime) {
-        this.success = success;
-        this.message = message;
-        this.token = token;
+    public User(String id, String username, String password, String createTime) {
+        this.id = id;
         this.username = username;
         this.password = password;
         this.createTime = createTime;
     }
 
-    public String getSuccess() {
-        return success;
+    public String getId() {
+        return id;
     }
 
-    public void setSuccess(String success) {
-        this.success = success;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getUsername() {

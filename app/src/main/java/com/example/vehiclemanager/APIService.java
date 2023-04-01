@@ -13,11 +13,9 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface APIService {
-    @GET("api/auth/profile")
-    Call<User> getprofile();
     @FormUrlEncoded
     @POST("api/auth/login")
-    Call<User> login (@Field("username") String username, @Field("password") String password);
+    Call<LoginResponse> login (@Field("username") String username, @Field("password") String password);
 
     @FormUrlEncoded
     @POST("api/auth/signup")

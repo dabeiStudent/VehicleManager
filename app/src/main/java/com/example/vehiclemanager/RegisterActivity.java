@@ -64,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 if (response.isSuccessful()) {
-                    Toast.makeText(RegisterActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, response.message(), Toast.LENGTH_SHORT).show();
                     tvNoti.setText("");
                 } else {
                     Toast.makeText(RegisterActivity.this, response.message(), Toast.LENGTH_LONG).show();
